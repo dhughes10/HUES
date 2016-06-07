@@ -17,18 +17,22 @@
 <script>
 
 var image = [
-	'hues-3.png',
+	// 'hues-3.png',
 	'screenprint.png',
 	'twit-book.png',
 	'rules-poster.png',
 	'recipe.png',
 	'wave-shirt.png',
+	'buttons.png',
+	'lboard1.png',
+	'lboard2.png',
+	'light-stand.png',
 	];
 
 	var changePhoto = function() {
 		var url = image[Math.floor(Math.random() * image.length)];
 		$('.images').attr('src',url);
-		$('.images').fadeIn(0).delay( 5200 ).fadeOut(800).fadeIn(0).delay( 5200 ).fadeOut(800);
+		// $('.images').fadeIn(0).delay( 5200 ).fadeOut(800).fadeIn(0).delay( 5200 ).fadeOut(800);
 		console.log("change photo");
 	}
 
