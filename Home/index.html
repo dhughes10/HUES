@@ -8,6 +8,19 @@
 	<div class="container">
 		<image class="logo" src="hues-3.png"></image>
 		<image class="images" src=""></image>
+		<div class='menu'>
+			<a href="">Home</a>
+			<a href="">Works</a>
+			<a href="">Shop</a>
+			<a href="">About</a>
+		</div>
+		<div class='button'></div>
+		<div class='mobile-menu'>
+			<a class="mobileMenu-page" href="">Home</a>
+			<a class="mobileMenu-page" href="">Works</a>
+			<a class="mobileMenu-page" href="">Shop</a>
+			<a class="mobileMenu-page" href="">About</a>
+		</div>
 		<h3></h3>
 	</div>
 </body>
@@ -15,6 +28,11 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="randomColor.js"></script>
 <script>
+
+$( ".button" ).click(function(){
+	$(".mobile-menu").slideToggle();
+	$(".images").toggle();
+	 });
 
 var image = [
 	// 'hues-3.png',
@@ -27,6 +45,7 @@ var image = [
 	'lboard1.png',
 	'lboard2.png',
 	'light-stand.png',
+	'finch.png',
 	];
 
 	var changePhoto = function() {
