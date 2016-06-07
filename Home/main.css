@@ -1,0 +1,58 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	height: 1200px;
+}
+
+.logo {
+	position: fixed;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 25px;
+	width: 100px;
+	left: 0px;
+	bottom: 0px;
+
+}
+h3 {
+	position: fixed;
+	text-transform: uppercase;
+	font-family: helvetica;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 25px;
+	left: 0px;
+	top: 0px;
+
+}
+
+.images {
+	position: fixed;
+	width: 600px;
+	margin-left: -300px;
+	margin-top: -200px;
+	left: 50%;
+	top: 350px;
+/*	mix-blend-mode: multiply;*/
+
+}
+
+@media screen and (max-width: 640px) {
+ 
+.images {
+	position: fixed;
+	width: 300px;
+	margin-left: -150px;
+	margin-top: -120px;
+	left: 50%;
+	top: 275px;
+
+}
+
+}

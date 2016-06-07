@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<image class="logo" src="hues-3.png"></image>
+		<image class="images" src=""></image>
+		<h3></h3>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="randomColor.js"></script>
+<script>
+
+var image = [
+	'hues-3.png',
+	'screenprint.png',
+	'twit-book.png',
+	'rules-poster.png',
+	'recipe.png',
+	'wave-shirt.png',
+	];
+
+	var changePhoto = function() {
+		var url = image[Math.floor(Math.random() * image.length)];
+		$('.images').attr('src',url);
+		$('.images').fadeIn(0).delay( 5200 ).fadeOut(800).fadeIn(0).delay( 5200 ).fadeOut(800);
+		console.log("change photo");
+	}
+
+	changePhoto();
+	window.setInterval(changePhoto, 6000);
+
+	var changeColor = function() {
+		var color = randomColor({ 
+			luminosity: 'light',
+		    hue: 'random'
+		});
+		$('.container').css('background-color',color);
+		$('h3').text(color);
+		console.log("change color");
+		
+	}
+	changeColor();
+	window.setInterval(changeColor, 6000);
+
+</script>
+
+
+</html>
