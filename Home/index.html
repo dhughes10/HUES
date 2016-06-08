@@ -17,9 +17,17 @@
 		<div class='button'></div>
 		<div class='mobile-menu'>
 			<a class="mobileMenu-page" href="">Home</a>
-			<a class="mobileMenu-page" href="">Works</a>
+			<a class="mobileMenu-page works">Works</a>
 			<a class="mobileMenu-page" href="">Shop</a>
 			<a class="mobileMenu-page" href="">About</a>
+			<div class="works-menu">
+				<a class="mobileMenu-page" href="">Books</a>
+				<a class="mobileMenu-page" href="">Branding</a>
+				<a class="mobileMenu-page" href="">Print</a>
+				<a class="mobileMenu-page" href="">Type</a>
+				<a class="mobileMenu-page" href="">Web</a>
+				<a class="mobileMenu-page" href="">Other</a>
+			</div>
 		</div>
 		<h3></h3>
 	</div>
@@ -32,6 +40,10 @@
 $( ".button" ).click(function(){
 	$(".mobile-menu").slideToggle();
 	$(".images").toggle();
+	 });
+
+$( ".works" ).click(function(){
+	$(".works-menu").slideToggle();
 	 });
 
 var image = [

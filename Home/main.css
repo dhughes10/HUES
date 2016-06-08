@@ -122,6 +122,12 @@ a:hover {
 	text-align: center;
 }
 
+.works-menu {
+	display: none;
+	font-weight: 200;
+	margin-top: 20%;
+}
+
 
 }
 
