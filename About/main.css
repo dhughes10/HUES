@@ -8,13 +8,6 @@ body {
 	height: 1200px;
 }
 
-canvas[resize] {
-	position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
 .logo {
 	position: fixed;
 	margin-bottom: 20px;
@@ -37,16 +30,6 @@ h3 {
 	left: 0px;
 	top: 0px;
 
-}
-
-.images {
-	position: fixed;
-	width: 600px;
-	margin-left: -300px;
-	margin-top: -200px;
-	left: 50%;
-	top: 350px;
-/*	mix-blend-mode: multiply;*/
 }
 
 .menu {
@@ -82,15 +65,6 @@ a:hover {
 
 
 @media screen and (max-width: 640px) {
- 
-.images {
-	position: fixed;
-	width: 400px;
-	margin-left: -200px;
-	margin-top: -120px;
-	left: 50%;
-	top: 275px;
-}
 
 .menu {
 	display: none;
