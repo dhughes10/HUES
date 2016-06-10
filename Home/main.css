@@ -12,6 +12,8 @@ canvas[resize] {
 	position: fixed;
     width: 100%;
     height: 100%;
+    filter:blur(3px);
+    -webkit-filter: blur(3px);
     z-index: 0;
 }
 
