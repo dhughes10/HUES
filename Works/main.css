@@ -83,7 +83,7 @@ a {
 }
 
 .column {
-	width: 300px;
+	width: 350px;
 	align-item: center;
 }
 
@@ -154,6 +154,10 @@ a:hover {
 	display: none;
 	font-weight: 200;
 	margin-top: 10%;
+}
+
+.outer-container{
+	padding-left: 20px;
 }
 
 
