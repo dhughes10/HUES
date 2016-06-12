@@ -76,13 +76,14 @@ a {
 
 .flex-container {
 	display: flex;
+	text-align: center;
 	width: 100%;
 	height: auto;
 	flex-wrap: wrap;
 }
 
 .column {
-	width: 400px;
+	width: 300px;
 	align-item: center;
 }
 
