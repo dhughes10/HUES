@@ -166,6 +166,7 @@ a:hover {
 .column {
 	width: 350px;
 	align-item: center;
+	padding: 0px;
 }
 
 }
