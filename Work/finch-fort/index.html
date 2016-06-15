@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finch Fortress</title>
+</head>
+<body>
+	<div class="container">
+		<image class="logo" src="../../Images/hues-3.png"></image>
+		<div class='menu'>
+			<a href="../../Home/index.html">Home</a>
+			<a href="../../Work/index.html">Work</a>
+			<a href="../../Shop/index.html">Shop</a>
+			<a href="../../About/index.html">About</a>
+		</div>
+		<div class='button'></div>
+		<div class='mobile-menu'>
+			<a class="mobileMenu-page" href="../../Home/index.html">Home</a>
+			<a class="mobileMenu-page works">Work</a>
+			<a class="mobileMenu-page" href="../../Shop/index.html">Shop</a>
+			<a class="mobileMenu-page" href="../../About/index.html">About</a>
+			<div class="works-menu">
+				<a class="mobileMenu-page" href="../../Work/index.html">All</a>
+				<a class="mobileMenu-page" href="">Books</a>
+				<a class="mobileMenu-page" href="">Branding</a>
+				<a class="mobileMenu-page" href="">Print</a>
+				<a class="mobileMenu-page" href="">Type</a>
+				<a class="mobileMenu-page" href="">Web</a>
+				<a class="mobileMenu-page" href="">Other</a>
+			</div>
+		</div>
+		<div id="wrapper">
+			<h2>Finch Fortress</h2>
+			<image id="featIMG" src="../../Images/finch.png"></image>
+		</div>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nibh non nisi laoreet suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui leo, rhoncus nec orci sit amet, tempus fringilla justo. Ut commodo tortor quis diam ullamcorper, vestibulum maximus enim pellentesque. Mauris quis nisl quis diam congue fringilla feugiat ut nisi. Sed volutpat aliquet ullamcorper. Suspendisse interdum lorem sem, id maximus turpis convallis in.</p>
+		</div>
+		<div class="outer-container">
+		    <div class="flex-container">
+		      <div class="column">
+		      	<img src="../../Images/Finch-Fortress/finch1.jpg">
+		      	<img src="../../Images/Finch-Fortress/draft1.jpg">
+		      </div>
+		      <div class="column">
+		      	<img src="../../Images/Finch-Fortress/finch2.jpg">
+		      	<img src="../../Images/Finch-Fortress/draft2.jpg">
+		      </div>
+		      <div class="column">
+		      	<img src="../../Images/Finch-Fortress/finch3.png">
+		      	<img src="../../Images/Finch-Fortress/draft3.jpg">
+		      </div>
+	    	</div>
+    	</div>
+		<h3></h3>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="../../randomColor.js"></script>
+<script>
+
+$( ".button" ).click(function(){
+	$(".mobile-menu").slideToggle();
+	$(".outer-container").toggle();
+	$(".content").toggle();
+	$("#wrapper").toggle();
+	 });
+
+$( ".works" ).click(function(){
+	$(".works-menu").slideToggle();
+	 });
+
+	var changeColor = function() {
+		var color = randomColor({ 
+			luminosity: 'light',
+		    hue: 'random'
+		});
+		$('.container').css('background-color',color);
+		$('h3').text(color);
+		console.log("change color");
+		
+	}
+	changeColor();
+
+</script>
+
+
+</html>
