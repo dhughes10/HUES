@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video</title>
+</head>
+<body>
+	<div class="container">
+		<image class="logo" src="../Images/hues-3.png"></image>
+		<div class='menu'>
+			<a href="../Home/index.html">Home</a>
+			<a href="../Work/index.html">Work</a>
+			<a href="../Shop/index.html">Shop</a>
+			<a href="../About/index.html">About</a>
+		</div>
+		<div class='button'></div>
+		<div class='mobile-menu'>
+			<a class="mobileMenu-page" href="../Home/index.html">Home</a>
+			<a class="mobileMenu-page works">Work</a>
+			<a class="mobileMenu-page" href="../Shop/index.html">Shop</a>
+			<a class="mobileMenu-page" href="../About/index.html">About</a>
+			<div class="works-menu">
+				<a class="mobileMenu-page" href="../Work/index.html">All</a>
+				<a class="mobileMenu-page" href="../Books/index.html">Books</a>
+				<a class="mobileMenu-page" href="../Branding/index.html">Branding</a>
+				<a class="mobileMenu-page" href="../Print/index.html">Print</a>
+				<a class="mobileMenu-page" href="../Type/index.html">Type</a>
+				<a class="mobileMenu-page" href="../Web/index.html">Web</a>
+				<a class="mobileMenu-page" href="../Video/index.html">Video</a>
+			</div>
+		</div>
+		<div class="outer-container">
+		    <div class="flex-container">
+		      <div class="column">
+		      	<a id="imgLink" href="../Work/narrative/index.html">
+		      		<img src="../Images/Narrativity/narrative.png">
+		      	</a>Narrative Video
+		      </div>
+		      <div class="column">
+
+		      </div>
+		      <div class="column">
+
+		      </div>
+	    	</div>
+		</div>
+		<h3></h3>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="../randomColor.js"></script>
+<script>
+
+$( ".button" ).click(function(){
+	$(".mobile-menu").slideToggle();
+	$(".outer-container").toggle();
+	 });
+
+$( ".works" ).click(function(){
+	$(".works-menu").slideToggle();
+	 });
+
+	var changeColor = function() {
+		var color = randomColor({ 
+			luminosity: 'light',
+		    hue: 'random'
+		});
+		$('.container').css('background-color',color);
+		$('h3').text(color);
+		console.log("change color");
+		
+	}
+	changeColor();
+
+</script>
+
+
+</html>
