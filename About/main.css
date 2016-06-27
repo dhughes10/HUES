@@ -8,17 +8,18 @@ body {
 	height: 1200px;
 }
 
-.logo {
+svg {
 	position: fixed;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 25px;
-	width: 100px;
+	width: 80px;
 	left: 0px;
 	bottom: 0px;
-
+	z-index: 1000;
 }
+
 h3 {
 	position: fixed;
 	text-transform: uppercase;

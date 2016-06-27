@@ -7,7 +7,22 @@
 </head>
 <body>
 	<div class="container">
-		<image class="logo" src="../Images/hues-3.png"></image>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+		<g>
+			<g>
+				<path d="M231.1,484.7h-55.3V353.6H96.1v131.1H40.8V167.2h55.3v131.1h79.7V167.2h55.3V484.7z"/>
+				<path d="M479.1,392.9c0,51.8-42.8,94.7-95.5,94.7c-51.8,0-94.7-42.8-94.7-94.7V167.2h55.3v225.6c0.4,25.3,18.4,39.4,39.4,39.4
+					c21.9-0.4,40.3-18.4,40.3-39.4V167.2h55.3V392.9z"/>
+				<path d="M591.7,298.3h107.1v55.3H591.7V429h107.1v55.7H536.4V167.2h162.4v55.7H591.7V298.3z"/>
+				<path d="M836.3,430.7c21.7,0,37.3-13.1,37.3-31.9c0-28.4-47.3-38.9-83.4-59.9c-25.6-14.4-50-42.4-50-81.7
+					c0-53.7,43.4-93.5,96-93.5c53.4,0,96.9,43.7,96.9,97.4h-56c-1.3-22.3-18.7-40.6-40.8-40.6s-36.9,10.9-36.9,32.8
+					c0,24.5,40.4,37.1,73.8,55.1c29.1,16.2,59.9,42.4,59.9,86.5c0,52.9-43.4,92.6-96.9,92.6c-52.6,0-96-43.7-96-97h56
+					C797.2,412.4,814.6,430.7,836.3,430.7z"/>
+			</g>
+			<circle cx="836.7" cy="101.6" r="29.1"/>
+		</g>
+		</svg>
 		<div class='menu'>
 			<a href="../Home/index.html">Home</a>
 			<a href="../Work/index.html">Work</a>
@@ -52,12 +67,48 @@ $( ".works" ).click(function(){
 			luminosity: 'light',
 		    hue: 'random'
 		});
-		$('.container').css('background-color',color);
+		$('body').css('background-color',color);
 		$('h3').text(color);
 		console.log("change color");
-		
+
+		var color2 = randomColor({ 
+			luminosity: 'dark',
+		    hue: 'random'
+		});
+
+		$('.container').css('color',color2);
+	    $('.button').css('background-color',color2);
+	    $('.mobileMenu-page').css('color',color2);	
 	}
+	window.setInterval(changeColor, 1000);
 	changeColor();
+
+
+function logoAdd() {
+    
+    	var div = $('<div</div>');
+    	var div = $('svg'); //new div
+	    var posx = (Math.random() * ($('body').width() - 100));
+	    var posy = (Math.random() * ($('body').height() - 100));
+
+	    var color2 = randomColor({ 
+			luminosity: 'dark',
+		    hue: 'random'
+		});
+
+	$(div).css({
+	    'position':'fixed',
+	    'left':posx+'px',
+	    'top':posy+'px'
+	    }).appendTo('body');
+
+	$('body').append(div);
+	$('svg').css('fill',color2);
+}
+
+	logoAdd();
+	window.setInterval(logoAdd, 1000);
+
 
 </script>
 
