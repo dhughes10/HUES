@@ -1,101 +1,78 @@
 body {
 	margin: 0px;
-	overflow-x:hidden;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 .container {
 	width: 100%;
 	height: 1200px;
-	text-align: center;
-	position: absolute;
 }
 
-.logo {
+canvas[resize] {
 	position: fixed;
-	margin-bottom: 10px;
-	margin-top: 20px;
-	margin-left: 20px;
-	margin-right: 25px;
-	width: 100px;
-	left: 0px;
-	bottom: 0px;
-
+    width: 100%;
+    height: 100%;
+    filter:blur(3px);
+    -webkit-filter: blur(3px);
+    z-index: 0;
 }
-h3 {
+
+svg {
 	position: fixed;
-	text-transform: uppercase;
-	font-family: helvetica;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 25px;
+	width: 80px;
+	left: 0px;
+	bottom: 0px;
+}
+
+h3 {
+	position: fixed;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 25px;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 1.3px;
 	left: 0px;
 	top: 0px;
 
 }
 
+.images {
+	position: fixed;
+	width: 600px;
+	margin-left: -300px;
+	margin-top: -200px;
+	left: 50%;
+	top: 350px;
+/*	mix-blend-mode: multiply;*/
+}
+
 .menu {
 	position: fixed;
-	font-family: helvetica;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 25px;
 	right: 0px;
 	top: 0px;
-	z-index: 1000;
+	z-index: 100;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: 800;
-	font-size: 18px;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 1px;
 	padding-left: 10px;
 }
-
-#imgLink {
-	padding-left: 0px;
-}
-
-.outer-container {
-	position: fixed;
-	display: inline-block;
-	text-align: center;
-	font-family: helvetica;
-	text-transform: uppercase;
-	font-style: italic;
-	font-size: 10px;
-	font-weight: 800;
-	position: relative;
-	height: auto;
-	padding-top: 100px;
-
-}
-
-.flex-container {
-	text-align: center;
-	width: 100%;
-	height: auto;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-}
-
-.column {
-	width: 400px;
-	padding: 5px;
-	align-item: center;
-}
-
-img {
-  max-width: 100%;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-
 
 a:hover {
 	color: white;
@@ -111,8 +88,14 @@ a:hover {
 
 @media screen and (max-width: 640px) {
 
-.container {
-	height: 2200px;
+ 
+.images {
+	position: fixed;
+	width: 400px;
+	margin-left: -200px;
+	margin-top: -160px;
+	left: 50%;
+	top: 275px;
 }
 
 .menu {
@@ -144,10 +127,8 @@ a:hover {
 
 .mobileMenu-page {
 	display: block;
-	font-family: helvetica;
 	padding: 5px;
 	font-size: 18px;
-	font-weight: 700;
 	text-decoration: none;
 	color: black;
 	text-align: center;
@@ -159,15 +140,6 @@ a:hover {
 	margin-top: 10%;
 }
 
-.outer-container{
-	padding-left: 20px;
-}
-
-.column {
-	width: 350px;
-	align-item: center;
-	padding: 0px;
-}
 
 }
 

@@ -2,11 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <script type="text/javascript" src="paper-full.js"></script>
   <link rel="stylesheet" href="main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="../paper-full.js"></script>
+  <meta name="description" content="Hueṡ Graphic Design Studio">
+  <meta name="keywords" content="hues,hueṡ,hue,hughes,graphic design,parsons,studio,portfolio,design,new york city,dylan,hughes,easton,easton pa,art,work,branding,books,photography,graphic,type,typography,communication,chill,chill dill,dill,ṡ,">
+  <meta name="author" content="Dylan Hughes">
+  <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
   <title>Hueṡ</title>
 </head>
+<style>
+
+body {
+	overflow:hidden;
+}
+</style>
 <body>
 	<canvas id="canvas" resize hidpi="off"></canvas>
 	<div class="container">
@@ -28,25 +38,25 @@
 		</svg>
 		<image class="images" src=""></image>
 		<div class='menu'>
-			<a href="../Home/index.html">Home</a>
-			<a href="../Work/index.html">Work</a>
-			<a href="../Shop/index.html">Shop</a>
-			<a href="../About/index.html">About</a>
+			<a href="index.html">Home</a>
+			<a href="./work/index.html">Work</a>
+			<a href="./shop/index.html">Shop</a>
+			<a href="./about/index.html">About</a>
 		</div>
 		<div class='button'></div>
 		<div class='mobile-menu'>
-			<a class="mobileMenu-page" href="../Home/index.html">Home</a>
+			<a class="mobileMenu-page" href="index.html">Home</a>
 			<a class="mobileMenu-page works">Work</a>
-			<a class="mobileMenu-page" href="../Shop/index.html">Shop</a>
-			<a class="mobileMenu-page" href="../About/index.html">About</a>
+			<a class="mobileMenu-page" href="./shop/index.html">Shop</a>
+			<a class="mobileMenu-page" href="./about/index.html">About</a>
 			<div class="works-menu">
-				<a class="mobileMenu-page" href="../Work/index.html">All</a>
-				<a class="mobileMenu-page" href="../Books/index.html">Books</a>
-				<a class="mobileMenu-page" href="../Branding/index.html">Branding</a>
-				<a class="mobileMenu-page" href="../Print/index.html">Print</a>
-				<a class="mobileMenu-page" href="../Type/index.html">Type</a>
-				<a class="mobileMenu-page" href="../Web/index.html">Web</a>
-				<a class="mobileMenu-page" href="../Video/index.html">Video</a>
+				<a class="mobileMenu-page" href="./work/index.html">All</a>
+				<a class="mobileMenu-page" href="./books/index.html">Books</a>
+				<a class="mobileMenu-page" href="./branding/index.html">Branding</a>
+				<a class="mobileMenu-page" href="./print/index.html">Print</a>
+				<a class="mobileMenu-page" href="./type/index.html">Type</a>
+				<a class="mobileMenu-page" href="./web/index.html">Web</a>
+				<a class="mobileMenu-page" href="./video/index.html">Video</a>
 			</div>
 		</div>
 		<h3></h3>
@@ -68,18 +78,18 @@ $( ".works" ).click(function(){
 
 var image = [
 	// 'hues-3.png',
-	'../Images/screenprint.png',
-	'../Images/twit-book.png',
-	'../Images/rules-poster.png',
-	'../Images/recipe.png',
-	'../Images/wave-shirt.png',
-	'../Images/buttons.png',
-	'../Images/lboard1.png',
-	'../Images/lboard2.png',
-	'../Images/lboard3.png',
-	'../Images/light-stand.png',
-	'../Images/finch.png',
+	'./assets/screenprint.png',
+	'./assets/twit-book.png',
+	'./assets/rules-poster.png',
+	'./assets/recipe.png',
+	'./assets/wave-shirt.png',
+	'./assets/lboard1.png',
+	'./assets/lboard2.png',
+	'./assets/lboard3.png',
+	'./assets/light-stand.png',
+	'./assets/finch.png',
 	];
+
 
 	var changePhoto = function() {
 		var url = image[Math.floor(Math.random() * image.length)];
@@ -89,32 +99,78 @@ var image = [
 	}
 
 	changePhoto();
-	window.setInterval(changePhoto, 6000);
+	window.setInterval(changePhoto, 3000);
+
+	var background = [
+
+	'#3c3834',
+	'#442d25',
+	'#852111',
+	'#7c1f2f',
+	'#595c2b',
+	'#63312b',
+	'#884a3a',
+	];
 
 	var changeColor = function() {
-		var color = randomColor({ 
-			luminosity: 'light',
-		    hue: 'random'
-		});
+		var color = background[Math.floor(Math.random() * background.length)];
 		$('body').css('background-color',color);
 		$('#canvas').css('background-color',color);
 		$('h3').text(color);
-		console.log("change color");
-		
+		console.log("change color");	
 	}
+
 	changeColor();
-	window.setInterval(changeColor, 6000);
+	window.setInterval(changeColor, 3000);
+
+// 	var foreground = [
+// 	'#926646',
+// 	'#867d5a',
+// 	'#86a18b',
+// 	'#e4bc61',
+// 	'#ab612d',
+// 	'#a29b8f',
+// 	'#cf8e42',
+
+// 	// '#ffffff',
+// 	];
+
+// 	var changeColor2 = function() {
+//     var color = foreground[Math.floor(Math.random() * foreground.length)];
+
+//     $('.container').css('color',color);
+//     $('svg').css('fill',color);
+//     $('.button').css('background-color',color);
+//     $('.mobileMenu-page').css('color',color);
+// }
+// changeColor2();
+// 	window.setInterval(changeColor2, 6000);
+
 </script>
-<script type="text/paperscript" canvas="canvas">
+
+
+ <script type="text/paperscript" canvas="canvas">
+
+var foreground = [
+	'#926646',
+	'#867d5a',
+	'#86a18b',
+	'#e4bc61',
+	'#ab612d',
+	'#a29b8f',
+	'#cf8e42',
+
+	// '#ffffff',
+	];
+
  	var count = 150;
-    var color = randomColor({ 
-				luminosity: 'dark',
-			    hue: 'random'
-			});
+    var color = foreground[Math.floor(Math.random() * foreground.length)];
+
     $('.container').css('color',color);
     $('svg').css('fill',color);
     $('.button').css('background-color',color);
     $('.mobileMenu-page').css('color',color);
+	
 
     project.currentStyle = {
         fillColor: color
@@ -178,5 +234,5 @@ var image = [
             position.y = bounds.height  + itemBounds.height / 2;
         }
     }
-    </script>
+  </script>
 </html>

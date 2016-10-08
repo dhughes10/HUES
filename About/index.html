@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hueṡ Graphic Design Studio">
+  <meta name="keywords" content="hues,hueṡ,hue,hughes,graphic design,parsons,studio,portfolio,design,new york city,dylan,hughes,easton,easton pa,art,work,branding,books,photography,graphic,type,typography,communication,chill,chill dill,dill,ṡ,">
+  <meta name="author" content="Dylan Hughes">
+  <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
   <title>About</title>
 </head>
+<style>
+
+body {
+	overflow: hidden;
+}
+
+h1 {
+	letter-spacing: 1px;
+}
+
+h2 {
+	letter-spacing: 1px;
+}
+
+.container {
+	width: 100%;
+	height: 1800px;
+	text-align: center;
+	position: absolute;
+}
+
+
+.about {
+	padding-top: 250px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 640px) {
+
+	.about {
+	padding-top: 130px;
+}
+
+
+}
+
+
+</style>
 <body>
 	<div class="container">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -24,33 +70,40 @@
 		</g>
 		</svg>
 		<div class='menu'>
-			<a href="../Home/index.html">Home</a>
-			<a href="../Work/index.html">Work</a>
-			<a href="../Shop/index.html">Shop</a>
-			<a href="../About/index.html">About</a>
+			<a href="../index.html">Home</a>
+			<a href="../work/index.html">Work</a>
+			<a href="../shop/index.html">Shop</a>
+			<a href="../about/index.html">About</a>
 		</div>
 		<div class='button'></div>
 		<div class='mobile-menu'>
-			<a class="mobileMenu-page" href="../Home/index.html">Home</a>
+			<a class="mobileMenu-page" href="../index.html">Home</a>
 			<a class="mobileMenu-page works">Work</a>
-			<a class="mobileMenu-page" href="../Shop/index.html">Shop</a>
-			<a class="mobileMenu-page" href="../About/index.html">About</a>
+			<a class="mobileMenu-page" href="../shop/index.html">Shop</a>
+			<a class="mobileMenu-page" href="../about/index.html">About</a>
 			<div class="works-menu">
-				<a class="mobileMenu-page" href="../Work/index.html">All</a>
-				<a class="mobileMenu-page" href="../Books/index.html">Books</a>
-				<a class="mobileMenu-page" href="../Branding/index.html">Branding</a>
-				<a class="mobileMenu-page" href="../Print/index.html">Print</a>
-				<a class="mobileMenu-page" href="../Type/index.html">Type</a>
-				<a class="mobileMenu-page" href="../Web/index.html">Web</a>
-				<a class="mobileMenu-page" href="../Video/index.html">Video</a>
+				<a class="mobileMenu-page" href="../work/index.html">All</a>
+				<a class="mobileMenu-page" href="../books/index.html">Books</a>
+				<a class="mobileMenu-page" href="../branding/index.html">Branding</a>
+				<a class="mobileMenu-page" href="../print/index.html">Print</a>
+				<a class="mobileMenu-page" href="../type/index.html">Type</a>
+				<a class="mobileMenu-page" href="../web/index.html">Web</a>
+				<a class="mobileMenu-page" href="../video/index.html">Video</a>
 			</div>
 		</div>
 		<h3></h3>
+		<div class="about">
+			<h1>Graphic Design Studio</h1>
+			<h2>Dylan Hughes</h2>
+			<a>hughd299@newschool.edu</a><br>
+			<a href="http://facebook.com/hues10">Facebook</a><br>
+			<a href="http://instagram.com/hues.images">Instagram</a><br>
+		</div>
 	</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="../randomColor.js"></script>
+<script src="../main.js"></script>
 <script>
 
 $( ".button" ).click(function(){
@@ -61,54 +114,6 @@ $( ".button" ).click(function(){
 $( ".works" ).click(function(){
 	$(".works-menu").slideToggle();
 	 });
-
-	var changeColor = function() {
-		var color = randomColor({ 
-			luminosity: 'light',
-		    hue: 'random'
-		});
-		$('body').css('background-color',color);
-		$('h3').text(color);
-		console.log("change color");
-
-		var color2 = randomColor({ 
-			luminosity: 'dark',
-		    hue: 'random'
-		});
-
-		$('.container').css('color',color2);
-	    $('.button').css('background-color',color2);
-	    $('.mobileMenu-page').css('color',color2);	
-	}
-	window.setInterval(changeColor, 1000);
-	changeColor();
-
-
-function logoAdd() {
-    
-    	var div = $('<div</div>');
-    	var div = $('svg'); //new div
-	    var posx = (Math.random() * ($('body').width() - 100));
-	    var posy = (Math.random() * ($('body').height() - 100));
-
-	    var color2 = randomColor({ 
-			luminosity: 'dark',
-		    hue: 'random'
-		});
-
-	$(div).css({
-	    'position':'fixed',
-	    'left':posx+'px',
-	    'top':posy+'px'
-	    }).appendTo('body');
-
-	$('body').append(div);
-	$('svg').css('fill',color2);
-}
-
-	logoAdd();
-	window.setInterval(logoAdd, 1000);
-
 
 </script>
 
