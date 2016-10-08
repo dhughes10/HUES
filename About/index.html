@@ -42,6 +42,9 @@ h2 {
 
 @media screen and (max-width: 640px) {
 
+.container {
+	height: 600px;
+}
 	.about {
 	padding-top: 130px;
 }
@@ -109,6 +112,7 @@ h2 {
 $( ".button" ).click(function(){
 	$(".mobile-menu").slideToggle();
 	$(".images").toggle();
+	$(".about").toggle();
 	 });
 
 $( ".works" ).click(function(){

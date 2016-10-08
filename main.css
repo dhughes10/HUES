@@ -26,6 +26,7 @@ svg {
 	width: 80px;
 	left: 0px;
 	bottom: 0px;
+	z-index: 1000;
 }
 
 h3 {
